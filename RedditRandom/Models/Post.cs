@@ -39,15 +39,8 @@ namespace RedditRandom.Models
         [JsonProperty("is_video")]
         public bool IsVideo { get; set; }
 
-        //[JsonProperty("media")]
-        //public Media Media { get; set; }
-
-        //[JsonProperty("media_embed")]
-        //public MediaEmbed MediaEmbed { get; set; }
-
-        [JsonProperty("media_metadata")]
-        [JsonConverter(typeof(MediaMetadataConverter))]
-        public MediaMetadata MediaMetadata { get; set; }
+        [JsonProperty("crosspost_parent_list")]
+        public List<CrosspostParentList> CrosspostParentList { get; set; }
 
         [JsonProperty("secure_media")]
         public SecureMedia SecureMedia { get; set; }

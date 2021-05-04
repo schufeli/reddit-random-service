@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using RedditRandom;
 using RedditRandom.Models;
 using System;
 using System.Collections.Generic;
@@ -11,16 +10,11 @@ namespace GalleryDeserializer
     {
         static void Main(string[] args)
         {
-            var settings = new JsonSerializerSettings
-            {
-                MaxDepth = null
-            };
-
             var jsonString = File.ReadAllText("./Post.json");
 
-            var model = JsonConvert.DeserializeObject<List<Root>>(jsonString, settings);
+            var model = JsonConvert.DeserializeObject<List<Root>>(jsonString);
 
-            Console.WriteLine(model?[0].Data.Children[0].Post.MediaMetadata);
+            Console.WriteLine(model?[0].Data.Children[0].Post);
 
         }
     }
