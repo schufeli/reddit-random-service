@@ -6,14 +6,15 @@ using System.Collections.Generic;
 
 namespace RedditRandom
 {
-    public class MediaMetadataConverter : JsonConverter<MediaMetadata>
+    public class MediaMetadataConverter : JsonConverter<List<GalleryElement>>
     {
-        public override MediaMetadata ReadJson(JsonReader reader, Type objectType, MediaMetadata existingValue, bool hasExistingValue, JsonSerializer serializer)
+        public override List<GalleryElement> ReadJson(JsonReader reader, Type objectType, List<GalleryElement> existingValue, bool hasExistingValue, JsonSerializer serializer)
         {
             throw new NotImplementedException();
         }
 
-        public override void WriteJson(JsonWriter writer, MediaMetadata value, JsonSerializer serializer)
+
+        public override void WriteJson(JsonWriter writer, List<GalleryElement> value, JsonSerializer serializer)
         {
             throw new NotImplementedException();
         }

@@ -10,6 +10,7 @@ namespace RedditRandom.Models
     public class CrosspostParentList
     {
         [JsonProperty("media_metadata")]
+        [JsonConverter(typeof(MediaMetadataConverter))]
         public MediaMetadata MediaMetadata { get; set; }
     }
 }

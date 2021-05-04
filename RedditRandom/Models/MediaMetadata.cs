@@ -5,7 +5,6 @@ namespace RedditRandom.Models
 {
     public class MediaMetadata
     {
-        [JsonProperty("id")]
-        public string Id { get; set; }
+        List<GalleryElement> GalleryElements { get; set; }
     }
 }
