@@ -11,7 +11,7 @@ namespace GalleryDeserializer
     {
         static void Main(string[] args)
         {
-            var jsonString = File.ReadAllText("./Post.json");
+            var jsonString = File.ReadAllText("./post_embed_youtube.json");
 
             var model = JsonConvert.DeserializeObject<List<Root>>(jsonString);
 

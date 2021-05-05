@@ -18,7 +18,7 @@ namespace RedditRandom
                 return new(PostType.Text, null, null);
 
             if (post.SecureMedia != null && !post.IsVideo)
-                return new(PostType.Embed, post.SecureMedia.Oembed.Url, null);
+                return new(PostType.Embed, post.SecureMediaEmbed.Url, null);
 
             if (post.Url.Contains("gallery"))
             {
