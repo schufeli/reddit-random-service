@@ -11,7 +11,7 @@ namespace GalleryDeserializer
     {
         static void Main(string[] args)
         {
-            var jsonString = File.ReadAllText("./Post.json");
+            var jsonString = File.ReadAllText("./Post2.json");
 
             var model = JsonConvert.DeserializeObject<List<Root>>(jsonString);
 

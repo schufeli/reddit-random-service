@@ -24,7 +24,7 @@ namespace RedditRandom
             {
                 var gallery = new List<string>();
 
-                foreach (var element in post.Gallery[0].GalleryElements)
+                foreach (var element in post.Gallery)
                 {
                     gallery.Add(HttpUtility.HtmlDecode(element.Image.Url));
                 }

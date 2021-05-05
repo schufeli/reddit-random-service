@@ -2,12 +2,11 @@
 using Microsoft.AspNetCore.Mvc;
 using RedditRandom;
 using System;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Net.Http.Json;
 using System.Collections.Generic;
 using RedditRandom.Models;
+using Newtonsoft.Json;
 
 namespace RedditRandomService
 {
@@ -15,16 +14,15 @@ namespace RedditRandomService
     [Route("[controller]")]
     public class RedditController : ControllerBase
     {
-        private readonly JsonSerializerOptions _jsonSerializerOptions;
+        private readonly JsonSerializerSettings _jsonSettings;
         private readonly string _userAgent = Environment.GetEnvironmentVariable("USER_AGENT");
 
         #region Constructor
         public RedditController()
         {
-            _jsonSerializerOptions = new JsonSerializerOptions
+            _jsonSettings = new JsonSerializerSettings()
             {
-                ReferenceHandler = ReferenceHandler.Preserve,
-                IgnoreNullValues = true
+                Formatting = Formatting.Indented,
             };
         }
         #endregion
@@ -44,12 +42,12 @@ namespace RedditRandomService
             if (!response.IsSuccessStatusCode)
                 return new StatusCodeResult((int)response.StatusCode);
 
-            var content = await response.Content.ReadFromJsonAsync<List<Root>>();
+            var jsonString = await response.Content.ReadAsStringAsync();
+            var content = JsonConvert.DeserializeObject<List<Root>>(jsonString);
 
             return new JsonResult(
-                // ResponseFactory.CreateResponseFromPost(content?[0].Data.Children[0].Post),
-                content?[0].Data.Children[0].Post,
-                _jsonSerializerOptions
+                ResponseFactory.CreateResponseFromPost(content?[0].Data.Children[0].Post),
+                _jsonSettings
             );
         }
     }
