@@ -4,6 +4,7 @@ using RedditRandom.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Web;
 
 namespace GalleryDeserializer
 {
@@ -17,7 +18,7 @@ namespace GalleryDeserializer
 
             var post = ResponseFactory.CreateResponseFromPost(model?[0].Data.Children[0].Post);
 
-            Console.WriteLine(post);
+            Console.WriteLine(post.MediaSource);
         }
     }
 }

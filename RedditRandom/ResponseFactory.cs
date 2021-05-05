@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using System.Web;
 using RedditRandom.Models;
 
@@ -11,15 +12,19 @@ namespace RedditRandom
         {
             _ = post ?? throw new ArgumentNullException(nameof(post));
 
-            if (post.IsVideo)
+            /* Post is Video*/
+            if (post.IsVideo) 
                 return new(PostType.Video, post.SecureMedia.RedditVideo.Url, null);
 
-            if (post.Title.Length > 0 && post.Selftext.Length > 0)
+            /* Post is Text */
+            if (post.Title.Length > 0 || post.Selftext.Length > 0)
                 return new(PostType.Text, null, null);
 
+            /* Post is Embed */
             if (post.SecureMedia != null && !post.IsVideo)
-                return new(PostType.Embed, post.SecureMediaEmbed.Url, null);
+                return new(PostType.Embed, HttpUtility.HtmlDecode(post.SecureMediaEmbed.Content), null); // First unescape JSON then HTML
 
+            /* Post is Gallery*/
             if (post.Url.Contains("gallery"))
             {
                 var gallery = new List<string>();
@@ -31,8 +36,12 @@ namespace RedditRandom
 
                 return new(PostType.Gallery, null, gallery);
             }
-                
-            return new(PostType.Image, HttpUtility.HtmlDecode(post.Preview.Images[0].Source.Url), null);
+            
+            /* Post is Image */
+            if (post.Preview?.Images.Count >= 0)
+                return new(PostType.Image, HttpUtility.HtmlDecode(post.Preview.Images[0].Source.Url), null);
+
+            throw new NotImplementedException();
         }
 
         public static Response CreateResponseFromPost(Post post)

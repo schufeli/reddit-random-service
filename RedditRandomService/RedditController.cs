@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using RedditRandom;
 using System;
 using System.Threading.Tasks;
-using System.Net.Http.Json;
 using System.Collections.Generic;
 using RedditRandom.Models;
 using Newtonsoft.Json;
@@ -22,7 +21,7 @@ namespace RedditRandomService
         {
             _jsonSettings = new JsonSerializerSettings()
             {
-                Formatting = Formatting.Indented,
+                //Formatting = Formatting.Indented
             };
         }
         #endregion
