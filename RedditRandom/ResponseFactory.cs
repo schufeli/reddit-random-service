@@ -37,7 +37,14 @@ namespace RedditRandom
 
         public static Response CreateResponseFromPost(Post post)
         {
-            var (postType, mediaSource, gallery) = ParsePost(post); //ToDo find a better name for it
+            PostType postType; 
+            string mediaSource; 
+            List<string> gallery;
+
+            if (post.CrossPosts != null)
+                (postType, mediaSource, gallery) = ParsePost(post.CrossPosts[0]);
+            else
+                (postType, mediaSource, gallery) = ParsePost(post);
 
             var builder = new ResponseBuilder()
                 .SetSubreddit(post.Subreddit)
