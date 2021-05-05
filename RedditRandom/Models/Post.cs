@@ -40,7 +40,7 @@ namespace RedditRandom.Models
         public bool IsVideo { get; set; }
 
         [JsonProperty("crosspost_parent_list")]
-        public List<CrosspostParentList> CrosspostParentList { get; set; }
+        public List<Gallery> Gallery { get; set; }
 
         [JsonProperty("secure_media")]
         public SecureMedia SecureMedia { get; set; }

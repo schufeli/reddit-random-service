@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace RedditRandom.Models
 {
@@ -9,5 +10,8 @@ namespace RedditRandom.Models
 
         [JsonProperty("status")]
         public string Status { get; set; }
+
+        [JsonProperty("s")]
+        public GalleryImage Image { get; set; }
     }
 }
