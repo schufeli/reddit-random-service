@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Web;
 
 namespace RedditRandom.Models
 {
@@ -18,6 +19,11 @@ namespace RedditRandom.Models
     public class Source
     {
         [JsonProperty("url")]
-        public string Url { get; set; }
+        private string _Url;
+        public string Url
+        {
+            get { return _Url; }
+            set { _Url = HttpUtility.HtmlDecode(value); } // Extended setter -> Url from the API is Decoded
+        }
     }
 }
