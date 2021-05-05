@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace RedditRandom.Models
 {
+    [JsonObject]
     public class Gallery
     {
         [JsonProperty("media_metadata")]

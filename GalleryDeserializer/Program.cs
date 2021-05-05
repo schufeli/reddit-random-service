@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using RedditRandom;
 using RedditRandom.Models;
 using System;
 using System.Collections.Generic;
@@ -14,8 +15,9 @@ namespace GalleryDeserializer
 
             var model = JsonConvert.DeserializeObject<List<Root>>(jsonString);
 
-            Console.WriteLine(model?[0].Data.Children[0].Post);
+            var post = ResponseFactory.CreateResponseFromPost(model?[0].Data.Children[0].Post);
 
+            Console.WriteLine(post);
         }
     }
 }
