@@ -17,7 +17,7 @@ namespace RedditRandom
                 return new(PostType.Video, post.SecureMedia.RedditVideo.Url, null);
 
             /* Post is Text */
-            if (post.Title.Length > 0 || post.Selftext.Length > 0)
+            if (post.Title.Length > 0 && post.Selftext.Length > 0 && post.SelftextHtml != null)
                 return new(PostType.Text, null, null);
 
             /* Post is Embed */

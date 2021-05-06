@@ -12,6 +12,9 @@ namespace RedditRandom.Models
         [JsonProperty("selftext")]
         public string Selftext { get; set; }
 
+        [JsonProperty("selftext_html")]
+        public string SelftextHtml { get; set; }
+
         [JsonProperty("title")]
         public string Title { get; set; }
 

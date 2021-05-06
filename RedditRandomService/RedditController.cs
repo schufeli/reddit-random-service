@@ -21,13 +21,13 @@ namespace RedditRandomService
         {
             _jsonSettings = new JsonSerializerSettings()
             {
-                //Formatting = Formatting.Indented
+                Formatting = Formatting.Indented
             };
         }
         #endregion
 
         [HttpGet("{subreddit}")]
-        public async Task<IActionResult> GetAsync(string subreddit)
+        public async Task<ActionResult<Response>> GetAsync(string subreddit)
         {
             HttpContext.Request.Headers.TryGetValue("AccessToken", out var accessToken);
 
@@ -43,6 +43,7 @@ namespace RedditRandomService
 
             var jsonString = await response.Content.ReadAsStringAsync();
             var content = JsonConvert.DeserializeObject<List<Root>>(jsonString);
+
 
             return new JsonResult(
                 ResponseFactory.CreateResponseFromPost(content?[0].Data.Children[0].Post),
