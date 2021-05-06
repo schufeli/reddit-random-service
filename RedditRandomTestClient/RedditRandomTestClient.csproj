@@ -10,10 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RedditRandom\RedditRandom.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="post_embed_youtube.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -1,8 +1,8 @@
-﻿using System;
+﻿using RedditRandom.Models;
+using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Web;
-using RedditRandom.Models;
 
 namespace RedditRandom
 {
@@ -13,7 +13,7 @@ namespace RedditRandom
             _ = post ?? throw new ArgumentNullException(nameof(post));
 
             /* Post is Video*/
-            if (post.IsVideo) 
+            if (post.IsVideo)
                 return new(PostType.Video, post.SecureMedia.RedditVideo.Url, null);
 
             /* Post is Text */
@@ -36,7 +36,7 @@ namespace RedditRandom
 
                 return new(PostType.Gallery, null, gallery);
             }
-            
+
             /* Post is Image */
             if (post.Preview?.Images.Count >= 0)
                 return new(PostType.Image, HttpUtility.HtmlDecode(post.Preview.Images[0].Source.Url), null);
@@ -46,8 +46,8 @@ namespace RedditRandom
 
         public static Response CreateResponseFromPost(Post post)
         {
-            PostType postType; 
-            string mediaSource; 
+            PostType postType;
+            string mediaSource;
             List<string> gallery;
 
             if (post.CrossPosts != null)

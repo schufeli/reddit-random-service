@@ -13,7 +13,7 @@ namespace RedditRandom
         public string AccessToken { get; }
 
         /// <inheritdoc/>
-        public string UserAgent { get;  }
+        public string UserAgent { get; }
 
         public WebAgent(string accssToken, string userAgent)
         {

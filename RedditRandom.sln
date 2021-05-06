@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedditRandom", "RedditRandom\RedditRandom.csproj", "{07CCE08C-2D0D-4778-8C17-AE96B49824AB}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedditRandomTest", "RedditRandomTest\RedditRandomTest.csproj", "{3456438B-8DCF-4A05-9D3C-26201C8D3FA0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedditRandomService", "RedditRandomService\RedditRandomService.csproj", "{88D7D8AF-39CB-42EA-9BFD-29A034A12CA3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedditRandomTestClient", "RedditRandomTestClient\RedditRandomTestClient.csproj", "{B7C9BC44-C98B-4761-A314-7103A77A7BE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedditRandom", "RedditRandom\RedditRandom.csproj", "{C5346CEC-CA9B-4090-8061-058E6819A244}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{07CCE08C-2D0D-4778-8C17-AE96B49824AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{07CCE08C-2D0D-4778-8C17-AE96B49824AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{07CCE08C-2D0D-4778-8C17-AE96B49824AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{07CCE08C-2D0D-4778-8C17-AE96B49824AB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3456438B-8DCF-4A05-9D3C-26201C8D3FA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3456438B-8DCF-4A05-9D3C-26201C8D3FA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3456438B-8DCF-4A05-9D3C-26201C8D3FA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{B7C9BC44-C98B-4761-A314-7103A77A7BE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7C9BC44-C98B-4761-A314-7103A77A7BE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7C9BC44-C98B-4761-A314-7103A77A7BE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5346CEC-CA9B-4090-8061-058E6819A244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5346CEC-CA9B-4090-8061-058E6819A244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5346CEC-CA9B-4090-8061-058E6819A244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5346CEC-CA9B-4090-8061-058E6819A244}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
