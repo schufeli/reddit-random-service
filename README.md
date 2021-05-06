@@ -13,9 +13,14 @@ API_KEY=<Your defined Key>
 
 For the User-Agent and other API rules please consult the [Official Reddit Documentation](https://github.com/reddit-archive/reddit/wiki/API)
 
-### Docker Command
+### Docker pull
+```
+docker pull schufeli/reddit-random-service
 ```
 
+### Docker run
+```
+docker run -p "<Port>:80" --name reddit-random-service -e API_KEY="<API Key>" -e USER_AGENT="<Useragent>" reddit-random-service
 ```
 ### Docker-Compose
 Please have a look at the provided [docker-compose.yml]() file.
