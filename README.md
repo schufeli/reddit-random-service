@@ -26,5 +26,21 @@ docker run -p "<Port>:80" --name reddit-random-service -e API_KEY="<API Key>" -e
 Please have a look at the provided [docker-compose.yml]() file.
 
 ## 🚀 How to use
+__Please note, for the Service to function properly you will need to provide a valid Reddit Access token with at least the read scope.__
 
+If you need to know how to get a Reddit Access token please consult this [Guide](https://github.com/reddit-archive/reddit/wiki/OAuth2) 
+
+### Request a Post
+To fetch a Post from the Service you will need to send an HTTP GET Request to your hosted Reddit Random Service (I will use localhost in the following examples!).
+
+``` 
+https://localhost<:Port>/reddit/<Subreddit> 
+```
+
+You also have to add two additional Headers to your Request use the following table as a reference.
+
+| Name | Value |
+| --- | --- |
+| ApiKey | Your defined Apikey (See Installation) |
+| AccessToken | Valid Reddit Api Accesstoken |
 
