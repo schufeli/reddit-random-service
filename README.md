@@ -84,3 +84,7 @@ When you encounter one of the following Status Code Results with a high chance t
 | 401 | Accesstoken is invalid or does not exists. |
 | 403 | The Requests Subreddit does not exist. |
 | 404 | The Requested Subreddit does not exist or query name was too long. |
+
+## 🍸 Contributors
+- [Sirh3e](https://github.com/sirh3e) *Refactoring and guidance.*
+- [Schufeli](https://github.com/Schufeli) *Initial work.*
