@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedditRandomTest", "RedditR
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedditRandomService", "RedditRandomService\RedditRandomService.csproj", "{88D7D8AF-39CB-42EA-9BFD-29A034A12CA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalleryDeserializer", "GalleryDeserializer\GalleryDeserializer.csproj", "{B7C9BC44-C98B-4761-A314-7103A77A7BE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedditRandomConsole", "GalleryDeserializer\RedditRandomConsole.csproj", "{B7C9BC44-C98B-4761-A314-7103A77A7BE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
