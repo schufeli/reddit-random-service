@@ -51,7 +51,7 @@ If your request was successful you will get a JSON object which is similar to th
 {
     "Subreddit": "<Subreddit Name>",
     "UserName": "<Name of the Post author>",
-    "Spoiler": <true / false>,
+    "Spoiler": "<true or false>",
     "Title": "<Post Title>",
     "SelfText": "<Post Text>",
     "Permalink": "<Post Perma Link>",
