@@ -1,5 +1,5 @@
 # Reddit Random (Service)
-![Workflow Build](https://img.shields.io/github/workflow/status/schufeli/reddit-random/dotnetcore/main)
+![Workflow Build](https://img.shields.io/github/workflow/status/schufeli/reddit-random/dotnet/main)
 ![Docker Build](https://img.shields.io/docker/build/schufeli/reddit-random)
 [![License](https://img.shields.io/github/license/Schufeli/reddit-random)](https://en.wikipedia.org/wiki/MIT_License)
 
