@@ -49,15 +49,34 @@ If your request was successful you will get a JSON object which is similar to th
 
 ```json
 {
-    "Subreddit": "skyrim",
-    "UserName": "t3_n533j2",
-    "Spoiler": false,
-    "Title": "Anybody killed Aerin? I married Mjoll the Lioness &amp; everytime I come home from killing some faithless Imperials he's there following Mjoll around. like a white night/simp/cuck. One time I waited for Aerin to wake up followed him outside of town killed him &amp; dragged him into the lake.",
-    "SelfText": "",
-    "Permalink": "/r/skyrim/comments/n533j2/anybody_killed_aerin_i_married_mjoll_the_lioness/",
-    "PostLink": "https://i.redd.it/1mrqvjph87x61.png",
-    "MediaSource": "https://preview.redd.it/1mrqvjph87x61.png?auto=webp&s=1fdfa172be69633fca8002b559a4eee85b056b03",
-    "Gallery": null,
-    "PostType": 0
+    "Subreddit": "<Subreddit Name>",
+    "UserName": "<Name of the Post author>",
+    "Spoiler": <true / false>,
+    "Title": "<Post Title>",
+    "SelfText": "<Post Text>",
+    "Permalink": "<Post Perma Link>",
+    "PostLink": "<Link which is assigned to the Post>",
+    "MediaSource": "<URL or Embed it depends on the Post>",
+    "Gallery": "<Array of URL's>",
+    "PostType": "<Table below>"
 }
 ```
+
+#### PostType's
+| Code | Type | Description |
+| --- | --- | -- |
+| 0 | Image | Link to the image will be the value of MediaSource |
+| 1 | Video | Link to the image will be the value of MediaSource |
+| 2 | Embed | Link or IFrame Embed will be the value of MediaSource |
+| 3 | Text | Will be the content of SelfText |
+| 4 | Gallery | The Gallery Array will contain as Url for each image |
+
+### Troubleshooting
+
+When you encounter one of the following Status Code Results with a high chance they have been sent from the Reddit API and have the following meanings.
+
+| Status Code | Description |
+| --- | --- |
+| 401 | Accesstoken is invalid or does not exists. |
+| 403 | The Requests Subreddit does not exist. |
+| 404 | The Requested Subreddit does not exist or query name was too long. |
