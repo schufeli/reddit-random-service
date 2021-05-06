@@ -1,7 +1,8 @@
 # Reddit Random (Service)
-![Workflow Build](https://img.shields.io/github/workflow/status/schufeli/reddit-random/dotnet/main)
-![Docker Build](https://img.shields.io/docker/build/schufeli/reddit-random-service)
-![License](https://img.shields.io/github/license/schufeli/reddit-random)
+![Workflow Build](https://img.shields.io/github/workflow/status/schufeli/reddit-random/dotnet/main?label=.NET%20build)
+![Docker Build](https://img.shields.io/docker/cloud/build/schufeli/reddit-random-service?label=Docker%20build)
+![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/schufeli/reddit-random/main?label=CodeFactor%20Grade)
+![License](https://img.shields.io/github/license/schufeli/reddit-random?label=License)
 
 Reddit Random is a small microservice API to fetch a random Post from any requested Subreddit. Written entirely in C#, built on ASP.NET Core 3.1 with Docker support.
 ## 📦 Installation
