@@ -8,7 +8,7 @@ namespace RedditRandom
 {
     public class GalleryElementConverter : JsonConverter
     {
-        public override bool CanConvert(Type objectType) 
+        public override bool CanConvert(Type objectType)
             => objectType == typeof(List<GalleryElement>);
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
