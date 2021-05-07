@@ -31,9 +31,9 @@ __Please note, for the Service to function properly you will need to provide a v
 
 If you need to know how to get a Reddit Access token please consult this [Guide](https://github.com/reddit-archive/reddit/wiki/OAuth2) 
 
-**Important Infomration (please read)!!**
+**Important Information (please read)!!**
 
-Because the used Reddit API Endpoint doesn't send any Ratelimiting information back. There is currently no possible resource-saving way to handle the Rate limits. So you will need to do this on your own in your application. The easiest way would be to just allow a request every second or implementing some kind of delay (60 Request per minute allowed by Reddit). It will be added as soon as there is a solution or workaround.Because the used Reddit API Endpoint doesn't send any Ratelimiting information back. There is currently no possible resource-saving way to handle the Rate limits. So you will need to do this on your own in your application. The easiest way would be to just allow a request every second or implementing some kind of delay (60 Request per minute allowed by Reddit). It will be added as soon as there is a solution or workaround.
+Because the used Reddit API Endpoint doesn't send any Ratelimiting information back. There is currently no possible resource-saving way to handle the Rate limits. So you will need to do this on your own in your application. The easiest way would be to just allow a request every second or implementing some kind of delay (60 Request per minute allowed by Reddit). It will be added as soon as there is a solution or workaround.
 
 ### Request a Post
 To fetch a Post from the Service you will need to send an HTTP GET Request to your hosted Reddit Random Service (I will use localhost in the following examples!).
