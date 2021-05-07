@@ -67,14 +67,16 @@ If your request was successful you will get a JSON object which is similar to th
 }
 ```
 
+Please note that you might have to unescape the IFrame Embed as it is sent via a JSON object!
+
 #### PostType's
 | Code | Type | Description |
 | --- | --- | -- |
 | 0 | Image | Link to the image will be the value of MediaSource |
-| 1 | Video | Link to the image will be the value of MediaSource |
+| 1 | Video | Link to the video will be the value of MediaSource |
 | 2 | Embed | Link or IFrame Embed will be the value of MediaSource |
 | 3 | Text | Will be the content of SelfText |
-| 4 | Gallery | The Gallery Array will contain as Url for each image |
+| 4 | Gallery | The Gallery Array will contain a string Url for each image (element) |
 
 ### Troubleshooting
 
