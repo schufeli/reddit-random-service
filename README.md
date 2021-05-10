@@ -1,8 +1,8 @@
 # Reddit Random (Service)
-![Workflow Build](https://img.shields.io/github/workflow/status/schufeli/reddit-random/dotnet/main?label=.NET%20build)
+![Workflow Build](https://img.shields.io/github/workflow/status/schufeli/reddit-random-service/dotnet/main?label=.NET%20build)
 ![Docker Build](https://img.shields.io/docker/cloud/build/schufeli/reddit-random-service?label=Docker%20build)
-![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/schufeli/reddit-random/main?label=CodeFactor%20Grade)
-![License](https://img.shields.io/github/license/schufeli/reddit-random?label=License)
+![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/schufeli/reddit-random-service/main?label=CodeFactor%20Grade)
+![License](https://img.shields.io/github/license/schufeli/reddit-random-service?label=License)
 
 Reddit Random is a small microservice API to fetch a random Post from any requested Subreddit. Written entirely in C#, built on ASP.NET Core 3.1 with Docker support.
 ## 📦 Installation
@@ -24,7 +24,7 @@ docker pull schufeli/reddit-random-service
 docker run -p "<Port>:80" --name reddit-random-service -e API_KEY="<API Key>" -e USER_AGENT="<Useragent>" reddit-random-service
 ```
 ### Docker-Compose
-Please have a look at the provided [docker-compose.yml](https://github.com/Schufeli/reddit-random/blob/create-release-version/docker-compose.yml) file.
+Please have a look at the provided [docker-compose.yml](https://github.com/Schufeli/reddit-random-service/blob/main/docker-compose.yml) file.
 
 ## 🚀 How to use
 __Please note, for the Service to function properly you will need to provide a valid Reddit Access token with at least the read scope.__
