@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using RedditRandom;
 using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using RedditRandom.Models;
 using Newtonsoft.Json;
+using RedditRandom.Models;
+using RedditRandom;
 
 namespace RedditRandomService
 {
