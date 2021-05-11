@@ -8,7 +8,6 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["RedditRandomService/RedditRandomService.csproj", "RedditRandomService/"]
-COPY ["RedditRandom/RedditRandom.csproj", "RedditRandom/"]
 RUN dotnet restore "RedditRandomService/RedditRandomService.csproj"
 COPY . .
 WORKDIR "/src/RedditRandomService"
