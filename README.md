@@ -90,4 +90,3 @@ When you encounter one of the following Status Code Results with a high chance t
 
 ## 🍸 Contributors
 - [Sirh3e](https://github.com/sirh3e) *Refactoring and guidance.*
-- [Schufeli](https://github.com/Schufeli) *Initial work.*
