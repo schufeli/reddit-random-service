@@ -1,6 +1,5 @@
 # Reddit Random (Service)
-![Workflow Build](https://img.shields.io/github/workflow/status/schufeli/reddit-random-service/dotnet/main?label=.NET%20build)
-![Docker Build](https://img.shields.io/docker/cloud/build/schufeli/reddit-random-service?label=Docker%20build)
+[![dotnet](https://github.com/schufeli/reddit-random-service/actions/workflows/dotnet.yml/badge.svg)](https://github.com/schufeli/reddit-random-service/actions/workflows/dotnet.yml)
 ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/schufeli/reddit-random-service/main?label=CodeFactor%20Grade)
 ![License](https://img.shields.io/github/license/schufeli/reddit-random-service?label=License)
 
